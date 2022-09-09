@@ -1,34 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
+ * main - Entry point
  *
- *
- * Description: print
- *
- *
- *
+ * Return: Exit status is 0 (if success)
  */
-int main()
+int main(void)
 {
-	int n1 = 0, n2;
-	while(n <= 9)
+	int i;
+	int j;
+
+	for (i = 48; i < 57; i++)
 	{
-
-		if (n1 != n2 && n1<n2) 
+		for (j = i + 1; j <= 57; j++)
 		{
-			putchar(n1 + 48);
-			putchar(n2 + 48);
-		       
-			if (n1+n2 !=17)
-			{
-				putchar(',');
-				putchar(' ');
-	                }
+			putchar(i);
+			putchar(j);
+			if (j == 57 && i == 56)
+				break;
+			putchar(44);
+			putchar(32);
 		}
-		++n2;
-
-
-			
-	}++n1;
-	return 0:
+	}
+	putchar('\n');
+	return(0);
 }
