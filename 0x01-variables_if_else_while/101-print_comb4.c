@@ -16,16 +16,15 @@ int main(void)
 			for (u = o + 1; u <= '9'; u++)
 			{
 				if ((o != i) && (u != o))
-				{
-					putchar(i);
-					putchar(o);
-					putchar(u);
-
-					if (i == '7' && o == '8')
-						continue;
+			{
+				putchar(i);
+				putchar(o);
+				putchar(u);
+				if (i == '7' && o == '8')
+					continue;
 					putchar(',');
 					putchar(' ');
-				}
+			}
 			}
 		}
 
