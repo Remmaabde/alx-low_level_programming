@@ -1,18 +1,23 @@
 #include "main.h"
 
 /**
- *  print_last_digit - Prints the last dogit of any value
- *  @n: This is a real number
- *
- *  Return: Last value of digit
+ * print_diagonal -> printing line
+ * @n: integer params
  */
-int print_last_digit(int n)
+void print_diagonal(int n)
 {
-	int last = n % 10;
+	int x, i;
 
-	if (n < 0)
-		last *= -1;
-	_putchar(last + '0');
-
-	return (last);
+	if (n <= 0)
+		_putchar('\n');
+	else
+	{
+		for (x = 0; x < n; x++)
+		{
+			for (i = 0; i < x; i++)
+				_putchar(' ');
+		_putchar(92);
+		_putchar('\n');
+		}
+	}
 }
