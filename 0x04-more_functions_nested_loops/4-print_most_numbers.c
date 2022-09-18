@@ -1,14 +1,16 @@
 #include "main.h"
 
 /**
- * _isalpha - Check for alphabet characters
- * @c: This is an ASCII character
- *
- * Return: 0 if not an alphabet, 1 if alphabet
+ * print_most_numbers -> this prints most numbers
  */
-int _isalpha(int c)
+void print_most_numbers(void)
 {
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-		return (1);
-	return (0);
+	int x;
+
+	for (x = 0; x < 10; x++)
+	{
+		if (x != 2 && x != 4)
+			_putchar(x + '0');
+	}
+	_putchar('\n');
 }
