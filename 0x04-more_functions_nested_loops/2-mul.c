@@ -1,23 +1,13 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - Prints a-z in lowercase 10 times
- * Return: Nothing (Null, void)
+ *  mul -> multiplying 2 numbers
+ *  @a: interger param1
+ *  @b: integer param 2
+ *  Return: success and intiger
  */
-void print_alphabet_x10(void)
+
+int mul(int a, int b)
 {
-	int i = 0;
-
-	while (i < 10)
-	{
-		char alphabet = 'a';
-
-		while (alphabet <= 'z')
-		{
-			_putchar(alphabet);
-			alphabet++;
-		}
-		_putchar('\n');
-		i++;
-	}
+	return (a * b);
 }
