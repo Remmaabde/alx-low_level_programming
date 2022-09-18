@@ -1,23 +1,20 @@
 #include "main.h"
 
 /**
- * print_sign - Checks for -ve, +ve or 0 integers
- * @n: This is a real number
- *
- * Return: 0 if zero, 1 if > 0 and -1 if < 0
+ * more_numbers -> printing more numbers
  */
-int print_sign(int n)
+void more_numbers(void)
 {
-	if (n > 0)
+	int x, y;
+
+	for (x = 0; x < 10; x++)
 	{
-		_putchar('+');
-		return (1);
+		for (y = 0; y < 15; y++)
+		{
+			if (y >= 10)
+				_putchar((y / 10) + '0');
+			_putchar((y % 10) + '0');
+		}
+		_putchar('\n');
 	}
-	else if (n < 0)
-	{
-		_putchar('-');
-		return (-1);
-	}
-	_putchar('0');
-	return (0);
 }
