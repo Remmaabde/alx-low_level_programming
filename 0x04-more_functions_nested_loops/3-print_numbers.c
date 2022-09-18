@@ -1,16 +1,14 @@
 #include "main.h"
 
 /**
- * _islower - Check for lowercase ASCII characters
- * @c: This is an ASCII character
- *
- * Return: 0 if not lowercase, 1 if lowercase
+ * print_numbers -> print numbers
  */
-int _islower(int c)
+
+void print_numbers(void)
 {
-	if ((c >= 97) && (c <= 122))
-	{
-		return (1);
-	}
-	return (0);
+	int x;
+
+	for (x = 0; x < 10; x++)
+		_putchar(x + '0');
+	_putchar('\n');
 }
