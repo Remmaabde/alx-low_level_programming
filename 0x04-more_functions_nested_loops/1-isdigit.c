@@ -1,19 +1,11 @@
 #include "main.h"
 
 /**
- * print_alphabet - Prints a-z in lowercase
- * Return: returns nothing/void
+ * _isdigit - funtion to check for a digit
+ * @c: an integer argument
+ * Return: success
  */
-void print_alphabet(void)
+int _isdigit(int c)
 {
-	char alphabet = 'a';
-
-	while (alphabet <= 'z')
-	{
-		_putchar(alphabet);
-		alphabet++;
-	}
-
-
-	_putchar('\n');
+	return (c >= '0' && c <= '9');
 }
