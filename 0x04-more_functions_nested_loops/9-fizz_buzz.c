@@ -1,38 +1,24 @@
 #include "main.h"
 
 /**
- *  times_table - prints the 9 times table, starting with 0
- *
- *  Return: Null, Void
+ * print_square -> printing line
+ *  @size: integer params
  */
-void times_table(void)
+void print_square(int size)
 {
-	int mm, nn, mul;
+	int x, y;
 
-	for (mm = 0; mm <= 9; mm++)
-	{
-		for (nn = 0; nn <= 9; nn++)
-		{
-			mul = mm * nn;
-			if (nn == 0)
-				_putchar('0' + mul);
-			else if (mul < 10)
-			{
-				_putchar(' ');
-				_putchar('0' + mul);
-			}
-			else
-			{
-				_putchar('0' + mul / 10);
-			        _putchar('0' + mul % 10);
-                        }
-			if (nn < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-		}
+	if (size <= 0)
 		_putchar('\n');
-
+	else
+	{
+		for (x = 0; x < size; x++)
+		{
+			for (y = 0; y < size; y++)
+			{
+				_putchar(35);
+			}
+			_putchar('\n');
+		}
 	}
 }
