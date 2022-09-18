@@ -1,17 +1,20 @@
+
 #include "main.h"
 
 /**
- * _abs -Computes the absolute value of the integer passed
- * @n: This is a real number
- *
- * Return: Absolute Value
+ * print_line -> printing line
+ * @n: integer params
  */
-int _abs(int n)
+void print_line(int n)
 {
-	if (n > 0)
-		return (n);
-	else if (n < 0)
-		return (n * -1);
+	int x;
+
+	if (n <= 0)
+		_putchar('\n');
 	else
-		return (0);
+	{
+		for (x = 0; x < n; x++)
+			_putchar(95);
+		_putchar('\n');
+	}
 }
