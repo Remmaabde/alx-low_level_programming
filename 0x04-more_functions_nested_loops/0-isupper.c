@@ -1,21 +1,11 @@
 #include "main.h"
 
 /**
- * main - Prints _putchar on the screen
- *
- * Return: On success, 0.
+ * _isupper -> this is a function to check upper case alphas
+ * @c: an integer paramer
+ * Return: something but success
  */
-int main(void)
+int _isupper(int c)
 {
-	char var[] = "_putchar";
-	int i;
-	int lenVar = sizeof(var) / sizeof(var[0]);
-
-	for (i = 0; i < lenVar - 1; i++)
-	{
-		_putchar(var[i]);
-	}
-	_putchar('\n');
-
-	return (0);
+	return (c >= 'A' && c <= 'Z');
 }
