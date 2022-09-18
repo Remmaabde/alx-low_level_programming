@@ -1,23 +1,23 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints 00:00 to 23:59
- *
- * Return: Just prints
+ * print_square -> printing line
+ * @size: integer params
  */
-void jack_bauer(void)
+void print_square(int size)
 {
-	int hr, min;
+	int x, y;
 
-	for (hr = 0; hr < 24; hr++)
+	if (size <= 0)
+		_putchar('\n');
+	else
 	{
-		for (min = 0; min < 60; min++)
+		for (x = 0; x < size; x++)
 		{
-			_putchar(hr / 10 + '0');
-			_putchar(hr % 10 + '0');
-			_putchar(':');
-			_putchar(min / 10 + '0');
-			_putchar(min % 10 + '0');
+			for (y = 0; y < size; y++)
+			{
+				_putchar(35);
+			}
 			_putchar('\n');
 		}
 	}
