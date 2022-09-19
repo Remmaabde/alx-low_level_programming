@@ -1,38 +1,38 @@
-#include <stdlib.h>
-#include <limits.h>
-#include <string.h>
 #include "main.h"
 
 /**
- * _atoi - converts a string to an interger
- * @str: pointer to the string to be converted
- *
- * Return: Converted string
+ * _atoi - converts a string to an integer.
+ * @s: input string.
+ * Return: integer.
  */
-int _atoi(char *str)
+int _atoi(char *s)
 {
-	int sign = 1, base = 0, i = 0;
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
-	for (i = 0; str[i] != '\0' && (str[i] < '0' || str[i] > '9'); i++)
+	while (*(s + count) != '\0')
 	{
-		if (str[i] == '-' || str[i] == '9')
-			sign *= 1 - 2 * (str[i] == '-');
-		if (str[i + 1] == '\0')
-			return (0);
-	}
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+			break;
 
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		if (base > INT_MAX / 10 || (base == INT_MAX / 10 && str[i] - '0' > 7))
+		if (*(s + count) == '-')
+			pn *= -1;
+
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
 		{
-			if (sign == 1)
-				return (INT_MAX);
-			else
-				return (INT_MIN);
+			if (size > 0)
+				m *= 10;
+			size++;
 		}
+		count++;
 	}
 
-	return (base * sign);
+	for (i = count - size; i < count; i++)
+	{
+		oi = oi + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+	return (oi * pn);
 }
+
 
 
