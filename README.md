@@ -1,1 +1,1 @@
-Error fixing issues
+arrays & pointers
